@@ -1,0 +1,49 @@
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .smalltext {
+    font-size: 40px;
+    color: grey;
+  }
+  
+  #countdown span {
+    font-size: 4em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+  }
+
+  body{
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-negro-abstracto-textura-primer-plano-color-negro_41969-11523.jpg) ;
+    
+  }

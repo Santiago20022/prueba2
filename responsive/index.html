@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contador de cuenta regresiva</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <div class="title">
+        <h1>poder ver a mi novia hermosa</h1>
+    </div>
+
+    <div id="countdown" class="row">
+      <div class="col">
+        <span id="days"></span>
+        <div class="smalltext">Días</div>
+      </div>
+      <div class="col">
+        <span id="hours"></span>
+        <div class="smalltext">Horas</div>
+      </div>
+      <div class="col">
+        <span id="minutes"></span>
+        <div class="smalltext">Minutos</div>
+      </div>
+      <div class="col">
+        <span id="seconds"></span>
+        <div class="smalltext">Segundos</div>
+      </div>
+    </div>
+    </div>
+  </body>
+
+  <script>
+    // Establece la fecha límite
+var countDownDate = new Date("Mar 29, 2023 00:00:00").getTime();
+
+// Actualiza el contador cada segundo
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+
+  var distance = countDownDate - now;
+
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "¡La cuenta regresiva ha terminado!";
+  }
+}, 1000);
+  </script>
+</html>
